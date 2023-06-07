@@ -47,6 +47,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
         
         var preferences = EasyTipView.Preferences()
         
+        preferences.animating.dismissOnTap = false
         preferences.drawing.font = UIFont(name: "Futura-Medium", size: 13)!
         preferences.drawing.foregroundColor = UIColor.white
         preferences.drawing.backgroundColor = UIColor(hue:0.46, saturation:0.99, brightness:0.6, alpha:1)
@@ -100,7 +101,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
         case buttonA:
             
             var preferences = EasyTipView.Preferences()
-            preferences.drawing.backgroundColor = UIColor(hue:0.58, saturation:0.1, brightness:1, alpha:1)
+            preferences.drawing.backgroundColor = UIColor.orange
             preferences.drawing.foregroundColor = UIColor.darkGray
             preferences.drawing.textAlignment = NSTextAlignment.center
             
@@ -108,9 +109,9 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.showInitialTransform = CGAffineTransform(translationX: -100, y: 0)
             preferences.animating.showInitialAlpha = 0
             preferences.animating.showDuration = 1
-            preferences.animating.dismissDuration = 1
+            preferences.animating.dismissOnTap = false
             
-            let view = EasyTipView(text: "Tip view within the green superview. Tap to dismiss.", preferences: preferences)
+            let view = EasyTipView(text: "새로운 스티커가 출시됐어요!", preferences: preferences)
             view.show(forView: buttonA, withinSuperview: self.smallContainerView)
             
         case buttonB:
@@ -124,8 +125,10 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: 15)
             preferences.animating.showInitialAlpha = 0
             preferences.animating.showDuration = 1
-            preferences.animating.dismissDuration = 1
+//            preferences.animating.dismissDuration = 1
             preferences.drawing.arrowPosition = .top
+            preferences.animating.dismissOnTap = false
+
             
             let text = "Tip view inside the navigation controller's view. Tap to dismiss!"
             EasyTipView.show(forView: self.buttonB,
@@ -142,8 +145,10 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: -15)
             preferences.animating.showInitialAlpha = 0
             preferences.animating.showDuration = 1.5
-            preferences.animating.dismissDuration = 1.5
+//            preferences.animating.dismissDuration = 1.5
             preferences.drawing.arrowPosition = .top
+            preferences.animating.dismissOnTap = false
+
             
             let text = "This tip view cannot be presented with the arrow on the top position, so position bottom has been chosen instead. Tap to dismiss."
             EasyTipView.show(forView: buttonC,
@@ -164,7 +169,9 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.showInitialTransform = CGAffineTransform(translationX: 0, y: -100)
             preferences.animating.showInitialAlpha = 0
             preferences.animating.showDuration = 1
-            preferences.animating.dismissDuration = 1
+//            preferences.animating.dismissDuration = 1
+            preferences.animating.dismissOnTap = false
+
             
             preferences.positioning.maxWidth = 150
             
@@ -184,7 +191,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.showInitialTransform = CGAffineTransform(translationX: 30, y: 100)
             preferences.animating.showInitialAlpha = 0
             preferences.animating.showDuration = 1
-            preferences.animating.dismissDuration = 1
+//            preferences.animating.dismissDuration = 1
             preferences.animating.dismissOnTap = false
             
             preferences.positioning.maxWidth = 150
@@ -202,6 +209,7 @@ class ViewController: UIViewController, EasyTipViewDelegate {
             preferences.animating.showInitialAlpha = 0
             preferences.animating.showDuration = 1
             preferences.animating.dismissDuration = 1
+            preferences.animating.dismissOnTap = false
             preferences.drawing.arrowPosition = .bottom
 
             preferences.positioning.contentInsets = UIEdgeInsetsMake(5, 5, 5, 5)

@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		1310EC961D0C53800000E71E /* EasyTipView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1310EC8B1D0C537F0000E71E /* EasyTipView.framework */; };
 		13FB32A91D0C53E5001ACE20 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FB32A61D0C53E2001ACE20 /* Tests.swift */; };
-		3DEF6DAB23A39E4F007B8C3C /* EasyTipView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DEF6DA823A39E4F007B8C3C /* EasyTipView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3DEF6DAC23A39E4F007B8C3C /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF6DA923A39E4F007B8C3C /* UIKitExtensions.swift */; };
 		3DEF6DAD23A39E4F007B8C3C /* EasyTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEF6DAA23A39E4F007B8C3C /* EasyTipView.swift */; };
+		71E8CF732A30503500150FB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71E8CF722A30503500150FB1 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +30,9 @@
 		13FB32A11D0C53CB001ACE20 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sources/EasyTipView/info.plist; sourceTree = SOURCE_ROOT; };
 		13FB32A51D0C53E2001ACE20 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = SOURCE_ROOT; };
 		13FB32A61D0C53E2001ACE20 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tests.swift; path = Tests/EasyTipViewTests/Tests.swift; sourceTree = SOURCE_ROOT; };
-		3DEF6DA823A39E4F007B8C3C /* EasyTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyTipView.h; sourceTree = "<group>"; };
 		3DEF6DA923A39E4F007B8C3C /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		3DEF6DAA23A39E4F007B8C3C /* EasyTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyTipView.swift; sourceTree = "<group>"; };
+		71E8CF722A30503500150FB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		3DEF6DA623A39E20007B8C3C /* EasyTipView */ = {
 			isa = PBXGroup;
 			children = (
-				3DEF6DA823A39E4F007B8C3C /* EasyTipView.h */,
+				71E8CF722A30503500150FB1 /* Images.xcassets */,
 				3DEF6DAA23A39E4F007B8C3C /* EasyTipView.swift */,
 				3DEF6DA923A39E4F007B8C3C /* UIKitExtensions.swift */,
 			);
@@ -115,7 +115,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEF6DAB23A39E4F007B8C3C /* EasyTipView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71E8CF732A30503500150FB1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,11 +293,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -347,10 +348,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -371,7 +373,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/EasyTipView/info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teodorpatras.EasyTipView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -394,7 +396,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/EasyTipView/info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teodorpatras.EasyTipView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teodorpatras.EasyTipViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teodorpatras.EasyTipViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

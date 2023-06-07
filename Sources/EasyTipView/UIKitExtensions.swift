@@ -1,17 +1,10 @@
-//
-//  UIKitExtensions.swift
-//  EasyTipView
-//
-//  Created by Teodor Patras on 29/06/16.
-//  Copyright © 2016 teodorpatras. All rights reserved.
-//
-
 #if canImport(UIKit)
 import UIKit
 
 // MARK: - UIBarItem extension -
 
 extension UIBarItem {
+    
     var view: UIView? {
         if let item = self as? UIBarButtonItem, let customView = item.customView {
             return customView
@@ -24,7 +17,7 @@ extension UIBarItem {
 
 extension UIView {
     
-    func hasSuperview(_ superview: UIView) -> Bool{
+    func hasSuperview(_ superview: UIView) -> Bool {
         return viewHasSuperview(self, superview: superview)
     }
     
